@@ -9,12 +9,12 @@ regex = '^(:(\S+) )?(\S+)( (?!:)(.+?))?( :(.+))?$'
 matchObj = re.match(regex, string2, re.M|re.I)
 
 if matchObj:
-   print "matchObj.group() : ", matchObj.group()
-   print "matchObj.group(1): ", matchObj.group(1)
+   print "FULL : ", matchObj.group()
+   print "Prefix: ", matchObj.group(1)
    print "matchObj.group(2): ", matchObj.group(2)
-   print "matchObj.group(3): ", matchObj.group(3)
+   print "Command : ", matchObj.group(3)
    print "matchObj.group(4): ", matchObj.group(4)
    print "matchObj.group(5): ", matchObj.group(5)
-   print "matchObj.group(6): ", matchObj.group(6)
+   print "Tail: ", matchObj.group(6)
 else:
    print "No match!!"
